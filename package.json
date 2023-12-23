@@ -1,0 +1,11 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:hoglund003/blog.git",
+  "author": "Kasper Høglund <hoglund003@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "daisyui": "^4.4.23"
+  }
+}
