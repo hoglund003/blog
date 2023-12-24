@@ -13,6 +13,12 @@
 
   <body>
     <%= render "components/navbar" %>
+    <% if flash[:notice] %>
+      <%= render "components/notice", message: flash[:notice] %>
+    <% end %>
+    <% if flash[:alert] %>
+      <%= render "components/alert", message: flash[:alert] %>
+    <% end %>
     <main class="container mx-auto mt-28 px-5 flex">
       <%= yield %>
     </main>
