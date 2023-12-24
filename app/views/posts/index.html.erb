@@ -1,0 +1,12 @@
+<div class="grid grid-cols-2 gap-2">
+  <% @posts.each do |post| %>
+    <article class="w-18 bg-primary-content px-8 py-3">
+      <h2 class="text-primary text-2xl">
+        <%= post.title.capitalize %>
+      </h2>
+      <p class="text-xl">
+        <%= post.content %>
+      </p>
+    </article>
+  <% end %>
+</div>
