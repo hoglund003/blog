@@ -1,12 +1,15 @@
-<div class="flex w-full gap-5">
-  <div class="flex flex-col bg-primary-content w-1/2 rounded-xl px-8 py-3">
-    <h1 class="text-3xl text-primary">
-      <%= @post.title.capitalize %>
-    </h1>
-    <p class="text-2xl">
-      <%= @post.content %>
-    </p>
-  </div>
+<div class="flex flex-col w-full gap-3">
+  <div class="flex w-full gap-5">
+    <div class="flex flex-col bg-primary-content w-1/2 rounded-xl px-8 py-3">
+      <h1 class="text-3xl text-primary">
+        <%= @post.title.capitalize %>
+      </h1>
+      <p class="text-2xl">
+        <%= @post.content %>
+      </p>
+    </div>
 
-  <%= render "components/user_card", user: @post.user %>
+    <%= render "components/user_card", user: @post.user %>
+  </div>
+  <%= render "comments/list", comments: @post.comments %>
 </div>

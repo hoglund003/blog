@@ -1,0 +1,9 @@
+<div class="bg-primary-content w-fit px-8 py-3 rounded-xl flex flex-col gap-3">
+
+  <% comments.each do |comment| %>
+    <div>
+      <h2 class="text-primary"><%= comment.user.full_name %></h2>
+      <%= comment.content %>
+    </div>
+  <% end %>
+</div>

@@ -2,6 +2,7 @@ require 'faker'
 
 User.destroy_all
 Post.destroy_all
+Comment.destroy_all
 
 10.times do
   u = User.new(
@@ -26,5 +27,19 @@ User.all.each do |user|
     )
 
     puts "Post created!" if p.save
+  end
+end
+
+Post.all.each do |post|
+  2.times do
+    date = rand((4.months.ago)..(1.day.ago))
+    c = Comment.new(
+      post: post,
+      user: User.all.sample,
+      content: Faker::Lorem.sentence(word_count: 4),
+      created_at: date,
+      updated_at: date,
+    )
+    puts "Comment created!" if c.save
   end
 end
